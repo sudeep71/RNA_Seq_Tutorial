@@ -62,7 +62,7 @@ Now we are not going to work with the complete dataset, just a small fraction (5
 	head -50000 ~/RNAseq-model/data/ERR315325_2.fastq | gzip > salivary_repl1_R2.fq.gz
 
 
-.. note:: What are above commands doing? First of all there are 2 programs being used in this process. We call head, a program which reads the top of lines of a file (1 to 10000 etc.) to read the first 50000 lines from the file ERR315325_1.fastq. We are also giving what is called the "complete path" (~/RNAseq-model/data/ERR315325_1.fastq), which is a "good practice" when using the command line. Now the 200000 lines from the fastq file is transfered to gzip, another program, in the pipeline. The symbol "|" is called "piped", which takes the output from one program, in our case head, and inputs to the other program, gzip. So gzip now takes the 200000 lines and renames it salivary_repl1_R1.fq.gz and then zips it to reduce space.
+.. note:: What are above commands doing? First of all there are 2 programs being used in this process. We call head, a program which reads the top of lines of a file (1 to 10000 etc.) to read the first 50,000 lines from the file ERR315325_1.fastq. We are also giving what is called the "complete path" (~/RNAseq-model/data/ERR315325_1.fastq), which is a "good practice", when using the command line. Now the 50,000 lines from the fastq file is transfered to gzip, another program, in the pipeline. The symbol "|" is called "piped", which takes the output from one program, in our case head, and inputs to the other program, gzip. So gzip now takes the 50,000 lines and renames it salivary_repl1_R1.fq.gz and then zips (.gz extension) to reduce space.
 
 
 Now we have two files, with R1 and R2 suffix. 
