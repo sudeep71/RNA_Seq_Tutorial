@@ -70,6 +70,6 @@ Please get familiar with the HPCC wiki commands found here (https://wiki.hpcc.ms
 
 Try to look into basic info, such as how to log into the HPCC and access your directory. 
 
-Try to use commands such as cd, ls, ls -l etc. to navigate and familiarize with the environment.
+Try to use commands such as cd, ls, ls -l etc. to navigate and get yourself familiar with the environment.
 
 Don't worry you cannot BREAK the machine.
