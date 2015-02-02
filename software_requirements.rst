@@ -7,7 +7,7 @@ You will need access to a SHH client before the start of class. It is important 
 - Mac and Linux Users:
 
 
-You are pretty much set if you are using a Mac or a Linux laptop. Just install filezila and you are set. ou will have to install this program before class (you need the client version). 
+You are pretty much set if you are using a Mac or a Linux laptop. Additionally, just install filezila. Please install this program before class (you need the client version). 
 
 
 https://filezilla-project.org
