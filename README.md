@@ -1,8 +1,7 @@
 # RNA_Seq_Tutorial
 RNA Seq tutorial for MMG 443
 
-This tutorial represents a step by step guide to analyse data using
-NGS data obtained from RNA-Seq experiments. 
+This tutorial represents a step by step guide to analyse NGS data obtained from RNA-Seq experiment. 
 
 This is the order of files 
 
@@ -18,3 +17,7 @@ This is the order of files
 10) batch_submission_for_other_sample
 11) qsub_hpcc
 12) data_analysis_using_R
+
+
+You will have to download the readme file and follow the order of the files.
+
