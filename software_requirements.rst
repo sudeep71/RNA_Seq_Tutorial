@@ -3,15 +3,20 @@ Software Requirements
 
 You will need access to a SHH client before the start of class. It is important you install the client before the lab class and get familiar with it use.
 
+
 - Mac and Linux Users:
 
 
-You are pretty much set if you are using a Mac or a Linux laptop 
+You are pretty much set if you are using a Mac or a Linux laptop. Just install filezila and you are set. ou will have to install this program before class (you need the client version). 
+
+
+https://filezilla-project.org
+
 
 - Windows Users:
 
 
-If you have Windows, you will need to install a SSH client.  
+If you have Windows, you will need to install a SSH client, but you dont need filezila 
 
 I suggest that you install mobaxterm, 
 
@@ -19,11 +24,9 @@ http://mobaxterm.mobatek.net/download.html
 
 Get the install edition and please try to do this before the class. The install is straight forward and if you need help, please contact before class.
 
-- FileZlla
+-FileZlla:
 
-You will have to install this program before class (you need the client version). 
 
-https://filezilla-project.org
 
 Once installed, open FileZila and click on the left most top icon. 
 
