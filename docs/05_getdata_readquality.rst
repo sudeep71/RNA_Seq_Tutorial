@@ -7,7 +7,9 @@ Two samples: salivary gland and lung. Note that each sample has one replicates, 
 
 .. note:: Since downloading this data takes hours, the data has been already downloaded and put into a folder for connivence
 
-.. note:: The command line is case sensitive. So be careful when to type commands. The best practice is to use lower case, underscore (_), and no spaces between words eg. course_work_project_mmg433. Also try to be as explicit in naming folders or use a data stamp eg. mmg443_rnaseq_tutorial_1/1/2015. 
+- Common Command line practices
+
+The command line is case sensitive, so be careful when to type commands and file names. The best practice is to use lower case, underscore (_), and no spaces between words eg. course_work_project_mmg433 or CourseWorkProjectMMG433. Also try to be as explicit in naming folders or use a data stamp eg. mmg443_rnaseq_tutorial_1/1/2015 to distinguish runs. 
 
 
  1. Lets start the process by first logging on to the HPCC
@@ -126,6 +128,6 @@ You will see 6 files. The original two files with a .gz extension and 4 new file
 
 Copy these files to your laptop. 
 
-MAC USERS: Now use Filezilla to log into your account then drag and drop to your computer and open using a browser. 
+MAC USERS: Now use Filezilla to log into your account, then drag and drop to your computer and open using a browser. 
 
 Windows USERS: Look to the left of your client, you will see a window with all the files. If you dont see the files, just refresh the view. Right click on the files and download them. You can open it in a browser.
