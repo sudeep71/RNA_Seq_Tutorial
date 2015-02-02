@@ -113,6 +113,8 @@ hit "q" to quit from the screen and go back to promt.
 ::
 
 	ls
+You will see 6 files. The original two files with a .gz extension and 4 new files (see below).
+
 
 ::
 
@@ -122,4 +124,8 @@ hit "q" to quit from the screen and go back to promt.
 	salivary_repl1_R2_fastqc.zip
 
 
-Copy these files to your laptop. Now use Filezilla to log into your account then drag and drop to your computer and open using a bowser. 
+Copy these files to your laptop. 
+
+MAC USERS: Now use Filezilla to log into your account then drag and drop to your computer and open using a browser. 
+
+Windows USERS: Look to the left of your client, you will see a window with all the files. If you dont see the files, just refresh the view. Right click on the files and download them. You can open it in a browser.
