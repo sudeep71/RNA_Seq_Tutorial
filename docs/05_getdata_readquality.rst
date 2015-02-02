@@ -22,7 +22,7 @@ Now that you are logged  into the HPC with SSH; use your MSU NetID and log into 
 	module load powertools
 	getexample RNAseq-model
 	
-.. note:: This loads the data from the machine to your home folder
+This loads the data from the machine to your home folder
 
 Now log into a node:
 
@@ -30,7 +30,8 @@ Now log into a node:
 
 	ssh dev-intel14-phi
 	
-Once you log into the dev node, type or paste the following 
+
+Once you log into the dev node (you can get the list when you first log into the hpcc), type or paste the following 
 
 ::
 
