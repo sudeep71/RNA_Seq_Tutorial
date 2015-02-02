@@ -12,7 +12,7 @@ Two samples: salivary gland and lung. Note that each sample has one replicates, 
 The command line is case sensitive, so be careful when to type commands and file names. The best practice is to use lower case, underscore (_), and no spaces between words eg. course_work_project_mmg433 or CourseWorkProjectMMG433. Also try to be as explicit in naming folders or use a data stamp eg. mmg443_rnaseq_tutorial_1/1/2015 to distinguish runs. 
 
 
- 1. Lets start the process by first logging on to the HPCC
+1. Lets start the process by first logging on to the HPCC
 
 
 Now that you are logged  into the HPC with SSH; use your MSU NetID and log into the machine ‘gateway.hpcc.msu.edu’. 
