@@ -18,3 +18,6 @@ This is the order of files
 -batch_submission_for_other_sample
 -qsub_hpcc
 -data_analysis_using_R
+
+
+You will find all these files in the doc folder
