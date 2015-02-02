@@ -24,11 +24,12 @@ http://mobaxterm.mobatek.net/download.html
 
 Get the install edition and please try to do this before the class. The install is straight forward and if you need help, please contact before class.
 
+
+
 -FileZlla:
 
 
-
-Once installed, open FileZila and click on the left most top icon. 
+Now for folks who installed filezilla. Once installed, open FileZila and click on the left most top icon. 
 
 You will get a screen like the one below
 
@@ -66,3 +67,9 @@ This keeps a log of files that have been transfered between the two machines
 You would have received a email from HPCC saying your account has been setup, if not let your instructor know in advance.
 
 Please get familiar with the HPCC wiki commands found here (https://wiki.hpcc.msu.edu/display/hpccdocs/Documentation+and+User+Manual)
+
+Try to look into basic info, such as how to log into the HPCC and access your directory. 
+
+Try to use commands such as cd, ls, ls -l etc. to navigate and familiarize with the environment.
+
+Don't worry you cannot BREAK the machine.
