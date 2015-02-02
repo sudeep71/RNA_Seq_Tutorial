@@ -1,7 +1,7 @@
 Process Overview
 =================
 
-- Please take a look at Fig 1. The whole exercise is going to be divided into various parts
+- The whole exercise is going to be divided into various parts
 
 1) Data retrieval, quality checking, and trimming.
 2) Mapping 
