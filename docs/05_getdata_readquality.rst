@@ -131,4 +131,4 @@ Copy these files to your laptop.
 
 MAC USERS: Now use Filezilla to log into your account, then drag and drop to your computer and open using a browser. 
 
-Windows USERS: Look to the left of your client, you will see a window with all the files. If you dont see the files, just refresh the view. Right click on the files and download them. You can open it in a browser.
+Windows USERS: Look to the left of your client, you will see a window with all the files. If you don't see the files, just refresh the view. Right click on the files and download them. You can open it in a browser.
