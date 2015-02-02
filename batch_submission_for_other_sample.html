@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>10. Processing Next Sample Through Automated Pipeline to get counts &mdash; RNA_Seq 0.01 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="RNA_Seq 0.01 documentation" href="index.html" />
+    <link rel="next" title="11. Submitting a Batch Job to the HPCC" href="qsub_hpcc.html" />
+    <link rel="prev" title="9. Count reads with HtSeq" href="count_with_htseq.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="qsub_hpcc.html" title="11. Submitting a Batch Job to the HPCC"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="count_with_htseq.html" title="9. Count reads with HtSeq"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RNA_Seq 0.01 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="processing-next-sample-through-automated-pipeline-to-get-counts">
+<h1>10. Processing Next Sample Through Automated Pipeline to get counts<a class="headerlink" href="#processing-next-sample-through-automated-pipeline-to-get-counts" title="Permalink to this headline">¶</a></h1>
+<p>We are going to repeat all this process one more time to get expression data from another set of samples.</p>
+<p>But what we are going to do is write a script to do it (how exciting !!!!)</p>
+<div class="highlight-python"><div class="highlight"><pre>cd ~/rnaseq/
+cat &gt; sample_lung_tophat.sh &lt;&lt;EOF
+</pre></div>
+</div>
+<p>Now paste this into the file:</p>
+<div class="highlight-python"><div class="highlight"><pre>    module load GNU/4.4.5
+    module load sickle/1.210
+    module load TopHat2/2.0.12
+    module load PySAM/0.6
+    module load HTSeq/0.6.1
+
+    # go to the &#39;rnaseq&#39; directory in my home directory
+    cd ~/rnaseq
+
+    # subset the data sets (100,000 reads) - you don&#39;t want to do this
+    # on real data :)
+    head -50000 ~/RNAseq-model/data/ERR315326_1.fastq | gzip &gt; lung_repl1_R1.fq.gz
+    head -50000 ~/RNAseq-model/data/ERR315326_2.fastq | gzip &gt; lung_repl1_R2.fq.gz
+
+    # run Sickle.  Here, the inputs are &#39;lung_repl1_R1.fq.gz&#39; and
+    # &#39;lung_repl1_R2.fq.gz&#39;, and the outputs are &#39;lung_repl1_R1_trimmed.fq&#39;
+    # and &#39;lung_repl1_R2.qc.fq&#39;.
+    sickle pe -f lung_repl1_R1.fq.gz \
+          -r lung_repl1_R2.fq.gz \
+          -t sanger \
+          -o lung_repl1_R1_trimmed.fq \
+          -p lung_repl1_R2_trimmed.fq \
+          -s lung_repl1_R2_single.fq \
+          -n -q20 -l 50 &gt; 40059_ACAGTG.log
+
+#now gzip the file so compactness
+
+gzip lung_repl1_R1_trimmed.fq &gt; lung_repl1_R1_trimmed.fq.qz
+gzip lung_repl1_R2_trimmed.fq &gt; lung_repl1_R2_trimmed.fq.qz
+
+    # now run Tophat!
+    # The inputs are the outputs of the previous qzip step.
+    # The outputs are going to be under the &#39;tophat_lung_repl1&#39; directory.
+    tophat -p 4 \
+    -G ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf \
+    --transcriptome-index=$HOME/RNAseq-model/transcriptome \
+    -o tophat_lung_repl1 \
+    ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome \
+    lung_repl1_R1_trimmed.fq.qz lung_repl1_R2_trimmed.fq.qz
+
+    # count the hits by gene -- &#39;tophat_lung_repl1&#39; is the main output,
+    # from Tophat.
+    htseq-count --format=bam --stranded=no --order=pos tophat_lung_repl1/accepted_hits.bam \
+     ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf &gt; lung_repl1_counts.txt
+    EOF
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">&#8220;#&#8221; or hash can be use in scripting language and the machine is inbuilt to leave or ignore these lines. So you can use # to be explicit.</p>
+</div>
+<p>You can use &#8220;nano&#8221; to edit the file</p>
+<div class="highlight-python"><div class="highlight"><pre>nano sample_lung_tophat.sh
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>bash sample_lung_tophat.sh
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="count_with_htseq.html"
+                        title="previous chapter">9. Count reads with HtSeq</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qsub_hpcc.html"
+                        title="next chapter">11. Submitting a Batch Job to the HPCC</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/batch_submission_for_other_sample.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="qsub_hpcc.html" title="11. Submitting a Batch Job to the HPCC"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="count_with_htseq.html" title="9. Count reads with HtSeq"
+             >previous</a> |</li>
+        <li><a href="index.html">RNA_Seq 0.01 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Sudeep Perumbakkam.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b2.
+    </div>
+  </body>
+</html>
