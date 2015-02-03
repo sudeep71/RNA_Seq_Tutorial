@@ -116,6 +116,7 @@ hit "q" to quit from the screen and go back to promt.
 ::
 
 	ls
+
 You will see 6 files. The original two files with a .gz extension and 4 new files (see below).
 
 
