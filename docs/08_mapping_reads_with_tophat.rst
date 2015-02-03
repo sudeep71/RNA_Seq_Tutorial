@@ -9,10 +9,10 @@ So before we start...
 
 What are the things we need to map reads to the genome?
 
-program: Tophat
-genome sequence: Human 
-Name of genes: GTF file or transcriptome index
-Reads: Paired end reads
+1) program: Tophat
+2) genome sequence: Human 
+3) Name of genes: GTF file or transcriptome index
+4) Reads: Paired end reads
 
 
 1. Load the software 
