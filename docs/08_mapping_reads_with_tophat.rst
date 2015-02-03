@@ -1,5 +1,7 @@
-Mapping reads with Tophat2
+8. Mapping reads with Tophat2
 ==========================
+
+Now we are all set, as we have good quality reads to map it to the human genome. To do this we will use a program called Tophat.
 
 
 1. Load the software 
