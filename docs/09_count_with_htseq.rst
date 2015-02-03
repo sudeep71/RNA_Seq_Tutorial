@@ -12,6 +12,11 @@ So, load the modules PySAM and HTSeq
 	module load HTSeq/0.6.1
 	
 	
+	
+
+If you get a message, ignore it
+
+
 Now run HTSeq to get the counts
 
 ::
