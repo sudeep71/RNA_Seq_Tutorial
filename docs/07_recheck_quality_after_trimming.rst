@@ -11,7 +11,10 @@ List all the files in your directory
 
 	ls
 
-.. Note :: If the fastqc module is loaded, you dont have to reload them again. If not use the command below
+.. Note :: If the fastqc module is loaded, you dont have to reload it again. 
+
+
+If not use the command below
 	
 ::
 
@@ -27,11 +30,15 @@ Now run the files ...
 	fastqc salivary_repl1_R2_trimmed.fq.gz
 	
 	
-Now you will have two html files. Use Filezila to transfer and view these files
+Now you will have two html files. 
+
+Mac USERs: Use Filezila to transfer and view these files
+
+Windows USERS: Refresh the side window and now you can download the two files
 
 
 
-So how do this file compare to the pervious file?
+So how does this file compare to the pervious file? What are the differences you observe?
 
 
 
