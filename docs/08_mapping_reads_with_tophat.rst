@@ -23,9 +23,9 @@ So lets start with loading the program into our workspace
 
 	module load TopHat2/2.0.12
 	
-Now to run Tophat2:
 
-Now to check that we are in the same dir
+	
+Before we run Tophat, check that we are in our working dir
 
 
 ::
