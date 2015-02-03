@@ -60,6 +60,11 @@ So first cd into the output dir
 
 	cd tophat_salivary_repl1
 	
+	
+::
+
+	ls
+	
 
 This list 8 files.
 
