@@ -79,7 +79,7 @@ So what do you see?
 
 
 
-To go out of press control X
+To go out of press, control X
 
 
 
