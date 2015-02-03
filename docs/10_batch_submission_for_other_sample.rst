@@ -44,10 +44,10 @@ Now paste this into the file:
               -s lung_repl1_single.fq \
               -n -q20 -l50 > lung_repl1.log
               
-   	 		# gzip the files as before to reduce space and have a input for tophat
+   	 # gzip the files as before to reduce space and have a input for tophat
     
-    		gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
-    		gzip lung_repl1_R2_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
+    	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
+    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
                   
 	# now run Tophat!
 	# The inputs are the outputs of the previous qzip step.
