@@ -16,7 +16,7 @@ and the paste this in:
 
 ::
 	
-	#PBS -l walltime=24:00:00,nodes=1:ppn=2,mem=20gb
+	#PBS -l walltime=12:00:00,nodes=1:ppn=2,mem=20gb
 
 	module load GNU/4.4.5
 	module load sickle/1.210
@@ -42,12 +42,12 @@ and the paste this in:
               -o lung_repl1_R1_trimmed.fq \
               -p lung_repl1_R2_trimmed.fq \
               -s lung_repl1_R2_single.fq \
-              -n -q20 -l 50 > 40059_ACAGTG.log
+              -n -q20 -l50 > lung_repl1.log
                   
     	#now gzip the file so compactness
     
-    	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.qz
-    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.qz
+    	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
+    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.gz
     
 	# now run Tophat!
 	# The inputs are the outputs of the previous qzip step.
@@ -57,7 +57,7 @@ and the paste this in:
     	--transcriptome-index=$HOME/RNAseq-model/transcriptome \
     	-o tophat_lung_repl1 \
     	~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome \
-    	lung_repl1_R1_trimmed.fq.qz lung_repl1_R2_trimmed.fq.qz
+    	lung_repl1_R1_trimmed.fq.gz lung_repl1_R2_trimmed.fq.gz
 
 	# count the hits by gene -- 'tophat_lung_repl1' is the main output,
 	# from Tophat.
