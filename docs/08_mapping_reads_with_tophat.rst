@@ -60,11 +60,15 @@ So first cd into the output dir
 
 	cd tophat_salivary_repl1
 	
+
+This list 8 files.
+
+	
 Now use nano to open the file 
 
 ::
 	
-	nano alignment
+	nano align_summary.txt
 
 
 What has happened? How many pairs of reads were present and how many aligned?
