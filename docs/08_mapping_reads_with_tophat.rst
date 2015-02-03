@@ -80,7 +80,7 @@ What has happened? How many pairs of reads were present and how many aligned?
 
 So what are the files.
 
-1. What is a BAM file?
+- What is a BAM file?
 
 
 http://samtools.github.io/hts-specs/SAMv1.pdf
