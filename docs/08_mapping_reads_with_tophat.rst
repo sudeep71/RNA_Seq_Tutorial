@@ -54,13 +54,15 @@ For more information check the tophat manual (http://ccb.jhu.edu/software/tophat
 
 2. Now once the alingment is done, lets look up the statistics
 
-So 
+So first cd into the output dir
 
 ::
 
 	cd tophat_salivary_repl1
 	
+Now use nano to open the file 
 
+::
 	nano aligment
 
 
