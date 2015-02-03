@@ -14,6 +14,8 @@ What are the things we need to map reads to the genome?
 3) Name of genes: GTF file or transcriptome index
 4) Reads: Paired end reads
 
+So lets start with loading the program into our workspace
+
 
 1. Load the software 
 
