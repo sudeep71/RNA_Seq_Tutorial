@@ -40,7 +40,7 @@ Now paste this into the file:
               -o lung_repl1_R1_trimmed.fq \
               -p lung_repl1_R2_trimmed.fq \
               -s lung_repl1_R2_single.fq \
-              -n -q20 -l 50 > 40059_ACAGTG.log
+              -n -q20 -l50 > lung_repl1.log
                   
     #now gzip the file so compactness
     
