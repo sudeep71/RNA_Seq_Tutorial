@@ -26,6 +26,14 @@ Now run HTSeq to get the counts
     ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf > salivary_repl1_counts.txt
     
     
+    
+Now lets see if the file is made
+
+::
+
+	ls -l
+
+
 Lets see what the output was
 
 
