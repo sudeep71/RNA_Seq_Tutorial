@@ -90,7 +90,7 @@ Moving on, to save some space on the machine we are going to gzip the two files
 gzip name_of _file > name_of_file.gz
 
 
-Pay attention to the .gz ending
+-Pay attention to the .gz ending
 		
 
 ::		
