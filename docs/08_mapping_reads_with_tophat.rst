@@ -10,7 +10,7 @@ Now we are all set, as we have good quality reads to map it to the human genome.
 
 	module load TopHat2/2.0.12
 	
-Now run Tophat2:
+Now to run Tophat2:
 
 Now to check that we are in the same dir
 
