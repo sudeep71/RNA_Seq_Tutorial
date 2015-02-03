@@ -43,10 +43,8 @@ Before we run Tophat, check that we are in our working dir
     
 
 
-What does all this mean?
+What does all this mean? Lets first start this command and then talk about it as it will take ~20 min to complete
 
-
-Will take ~20 min to finish
 
 
 Now what are these parameters?
@@ -54,7 +52,16 @@ Now what are these parameters?
 
 For more information check the tophat manual (http://ccb.jhu.edu/software/tophat/manual.shtml)
 
-2. Now once the alingment is done look up the statistics
+2. Now once the alingment is done, lets look up the statistics
+
+So 
+
+::
+
+	cd tophat_salivary_repl1
+	
+
+	nano aligment
 
 
 What has happened? How many pairs of reads were present and how many aligned?
