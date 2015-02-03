@@ -22,7 +22,7 @@ Now run HTSeq to get the counts
 ::
 
 	htseq-count --format=bam --stranded=no --order=pos \
-    tophat_salivary_repl1/accepted_hits.bam \
+    accepted_hits.bam \
     ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf > salivary_repl1_counts.txt
     
     
