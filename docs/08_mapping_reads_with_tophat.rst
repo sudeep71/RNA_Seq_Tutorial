@@ -4,6 +4,17 @@
 Now we are all set, as we have good quality reads to map it to the human genome. To do this we will use a program called Tophat.
 
 
+
+So before we start...
+
+What are the things we need to map reads to the genome?
+
+program: Tophat
+genome sequence: Human 
+Name of genes: GTF file or transcriptome index
+Reads: Paired end reads
+
+
 1. Load the software 
 
 ::
@@ -28,6 +39,9 @@ Now to check that we are in the same dir
     ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome \
     salivary_repl1_R1_trimmed.fq.gz salivary_repl1_R2_trimmed.fq.gz
     
+
+
+What does all this mean?
 
 
 Will take ~20 min to finish
