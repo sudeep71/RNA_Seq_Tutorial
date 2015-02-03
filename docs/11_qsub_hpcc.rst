@@ -27,7 +27,7 @@ and the paste this in:
 	# go to the 'rnaseq' directory in my home directory
 	cd ~/rnaseq
 
-	# subset the data sets (100,000 reads) - you don't want to do this
+	# subset the data sets (50,000 reads) - you don't want to do this
 	# on real data :)
 	head -50000 ~/RNAseq-model/data/ERR315326_1.fastq | gzip > lung_repl1_R1.fq.gz
 	head -50000 ~/RNAseq-model/data/ERR315326_2.fastq | gzip > lung_repl1_R2.fq.gz
