@@ -47,7 +47,7 @@ Now paste this into the file:
    	 # gzip the files as before to reduce space and have a input for tophat
     
     	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
-    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
+    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.gz
                   
 	# now run Tophat!
 	# The inputs are the outputs of the previous qzip step.
@@ -77,6 +77,11 @@ You can use "nano" to edit the file
 	nano sample_lung_tophat.sh
 
 
+
+::
+
+	ls 
+	
 ::
 
 	bash sample_lung_tophat.sh
