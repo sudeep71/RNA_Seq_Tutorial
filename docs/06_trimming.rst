@@ -25,7 +25,7 @@ Now paste or type this (be careful with space)
 
 ::
 
-	sickle pe -h
+	sickle pe -help
 	
 
 1. Follow, the format below to input in the details 

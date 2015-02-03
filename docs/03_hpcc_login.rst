@@ -1,4 +1,4 @@
-How to log into the HPCC?
+3. How to log into the HPCC?
 ==========================
 
 - Mac or Linux Users:

@@ -1,4 +1,4 @@
-Obtaining Data and Read Quality 
+5. Obtaining Data and Read Quality 
 ================================
 
 The data we will be using has been downloaded from the source. You will not be doing this part.

@@ -1,4 +1,4 @@
-Check Quality Post Trimming
+7. Check Quality Post Trimming
 ============================
 
 1. Need to check the results of trimming.

@@ -1,4 +1,4 @@
-Basic Commands
+4. Basic Commands
 ===============
 
 .. image:: /images/basic_linux/bashcmds.png

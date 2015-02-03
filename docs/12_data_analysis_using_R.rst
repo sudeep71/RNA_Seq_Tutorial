@@ -1,4 +1,4 @@
-Calculating Differential Expression 
+12. Calculating Differential Expression 
 ====================================
 
 

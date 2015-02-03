@@ -1,4 +1,4 @@
-Software Requirements
+1. Software Requirements
 =====================
 
 You will need access to a SHH client before the start of class. It is important you install the client before the lab class and get familiar with it use.

@@ -1,4 +1,4 @@
-Process Overview
+2. Process Overview
 =================
 
 - The whole exercise is going to be divided into various parts
