@@ -78,6 +78,10 @@ Now use nano to open the file
 
 What has happened? How many pairs of reads were present and how many aligned?
 
+
+now use Control x to close nano
+
+
 So what are the files.
 
 - What is a BAM file?
