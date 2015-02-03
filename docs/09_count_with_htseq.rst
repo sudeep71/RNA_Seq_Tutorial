@@ -1,6 +1,8 @@
-Count reads with HtSeq
-======================
-1. Now we need to count the number of reads that mapped to each gene 
+9. Count reads with HtSeq
+========================
+1. Now we need to count the number of reads that mapped to each gene from the tophat alignment
+
+
 
 So, load the modules PySAM and HTSeq 
 
