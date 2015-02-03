@@ -52,6 +52,7 @@ Where:
 -n, --discard-n, Discard sequences with any Ns in them
 
 -s, orphan reads that do not from pairs
+
 -l, length of read
 
 
