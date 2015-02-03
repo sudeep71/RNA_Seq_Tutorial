@@ -14,11 +14,11 @@ To run edgeR, you need to write a data loading and manipulation script in R. In 
 
 	cd ~/rnaseq
 
-		curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/lung_saliva.R
-		curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/lung_repl1_counts.txt
-		curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/lung_repl2_counts.txt
-		curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/salivary_repl1_counts.txt
-		curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/salivary_repl2_counts.txt
+	curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/lung_saliva.R
+	curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/lung_repl1_counts.txt
+	curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/lung_repl2_counts.txt
+	curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/salivary_repl1_counts.txt
+	curl -O http://2014-msu-rnaseq.readthedocs.org/en/latest/_static/subset/salivary_repl2_counts.txt
 
 
 .. note:: The saliva_repl1_counts.txt and lung_repl1_counts.txt are the files produced by mapping reads to the transcriptome with TopHat and Processing another sample with TopHat and HTSeq, respectively. The samples were run in replicate data sets, which produced the *repl2_counts.txt files.
