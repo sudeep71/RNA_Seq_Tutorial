@@ -42,7 +42,7 @@ Now paste this into the file:
               -s lung_repl1_R2_single.fq \
               -n -q20 -l50 > lung_repl1.log
                   
-    #now gzip the file so compactness
+    	#now gzip the file so compactness
     
     	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.qz
     	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.qz
