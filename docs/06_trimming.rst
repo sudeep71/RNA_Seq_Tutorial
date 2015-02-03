@@ -1,5 +1,5 @@
-Trimming Fastq Sequences
-==========================
+6. Trimming Fastq Sequences
+===========================
 
 1. Trimming sequences
 
@@ -12,6 +12,8 @@ Trimming Fastq Sequences
 	module load sickle/1.210
 	
 Now copy the code below and paste 
+
+How do you select these modules? 
 	
 ::
 
