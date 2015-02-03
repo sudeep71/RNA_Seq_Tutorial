@@ -34,5 +34,5 @@ The window on the left is the navigation panel, from which you can download file
 Always remember to refresh the window to get the latest content of your home dir
 
 
-.. image:: /images/hpcc_login/image_5.png
+.. image:: /images/hpcc_login/image_5.jpg
 
