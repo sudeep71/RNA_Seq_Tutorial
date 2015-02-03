@@ -63,6 +63,7 @@ So first cd into the output dir
 Now use nano to open the file 
 
 ::
+	
 	nano aligment
 
 
