@@ -24,38 +24,42 @@ Now paste this into the file:
 	module load HTSeq/0.6.1
 
 	# go to the 'rnaseq' directory in my home directory
+	
 	cd ~/rnaseq
 
-	# subset the data sets (100,000 reads) - you don't want to do this
-	# on real data :)
+	# subset the data sets (50,000 reads)  
+	
 	head -50000 ~/RNAseq-model/data/ERR315326_1.fastq | gzip > lung_repl1_R1.fq.gz
 	head -50000 ~/RNAseq-model/data/ERR315326_2.fastq | gzip > lung_repl1_R2.fq.gz
 
-	# run Sickle.  Here, the inputs are 'lung_repl1_R1.fq.gz' and
+	# To trim data,  Sickle.  Here, the inputs are 'lung_repl1_R1.fq.gz' and
 	# 'lung_repl1_R2.fq.gz', and the outputs are 'lung_repl1_R1_trimmed.fq'
 	# and 'lung_repl1_R2.qc.fq'.
+	
 	sickle pe -f lung_repl1_R1.fq.gz \
               -r lung_repl1_R2.fq.gz \
               -t sanger \
               -o lung_repl1_R1_trimmed.fq \
               -p lung_repl1_R2_trimmed.fq \
-              -s lung_repl1_R2_single.fq \
+              -s lung_repl1_single.fq \
               -n -q20 -l50 > lung_repl1.log
+              
+    # gzip the files as before to reduce space and have a input for tophat
+    
+    gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
+    gzip lung_repl1_R2_trimmed.fq > lung_repl1_R1_trimmed.fq.gz
                   
-    	#now gzip the file so compactness
-    
-    	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.qz
-    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.qz
-    
 	# now run Tophat!
 	# The inputs are the outputs of the previous qzip step.
 	# The outputs are going to be under the 'tophat_lung_repl1' directory.
+	
+	
 	tophat -p 4 \
     	-G ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf \
     	--transcriptome-index=$HOME/RNAseq-model/transcriptome \
     	-o tophat_lung_repl1 \
     	~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome \
-    	lung_repl1_R1_trimmed.fq.qz lung_repl1_R2_trimmed.fq.qz
+    	lung_repl1_R1_trimmed.fq.gz lung_repl1_R2_trimmed.fq.gz
 
 	# count the hits by gene -- 'tophat_lung_repl1' is the main output,
 	# from Tophat.
