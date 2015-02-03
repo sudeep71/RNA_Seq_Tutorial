@@ -26,4 +26,13 @@ Finally, you should get this screen and you are set.
 
 -	Windows Users:
 
-.. note:: Have to fill in..
+You will have to use your password twice to login to hpcc. Below is a screen shot after you log in.
+
+
+The window on the left is the navigation panel, from which you can download files from the hpcc to your computer.
+
+Always remember to refresh the window to get the latest content of your home dir
+
+
+.. image:: /images/hpcc_login/image_5.png
+
