@@ -56,7 +56,34 @@ Where:
 -l, length of read
 
 
-Now, to save some space on the machine we are going to gzip the two files
+Let's see if the file was made? 
+
+type 
+
+::
+
+
+	ls-l
+
+If you want to see what's in the log files, 
+
+:: 
+
+	nano salivary_repl1.log
+	
+
+
+So what do you see?
+
+
+
+
+
+To go out of press control X
+
+
+
+Moving on, to save some space on the machine we are going to gzip the two files
 
 
 
