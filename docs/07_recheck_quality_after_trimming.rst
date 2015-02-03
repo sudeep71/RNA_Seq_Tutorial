@@ -32,7 +32,7 @@ Now run the files ...
 	
 Now you will have two html files. 
 
-Mac USERs: Use Filezila to transfer and view these files
+Mac USERS: Use Filezila to transfer and view these files
 
 Windows USERS: Refresh the side window and now you can download the two files
 
