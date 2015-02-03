@@ -44,8 +44,8 @@ Now paste this into the file:
                   
     #now gzip the file so compactness
     
-    gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.qz
-    gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.qz
+    	gzip lung_repl1_R1_trimmed.fq > lung_repl1_R1_trimmed.fq.qz
+    	gzip lung_repl1_R2_trimmed.fq > lung_repl1_R2_trimmed.fq.qz
     
 	# now run Tophat!
 	# The inputs are the outputs of the previous qzip step.
