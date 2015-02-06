@@ -11,24 +11,45 @@ Two samples: salivary gland and lung. Note that each sample has one replicates, 
 
 The command line is case sensitive, so be careful when to type commands and file names. The best practice is to use lower case, underscore (_), and no spaces between words eg. course_work_project_mmg433 or CourseWorkProjectMMG433. Also try to be as explicit in naming folders or use a data stamp eg. mmg443_rnaseq_tutorial_1/1/2015 to distinguish runs. 
 
+Please, try to paste the commands into the terminal window
 
-1. Lets start the process by first logging on to the HPCC
+If you are typing out commands, please pay extra caution and watch out for spelling mistakes
 
 
-Now that you are logged  into the HPC with SSH; use your MSU NetID and log into the machine ‘gateway.hpcc.msu.edu’. 
+1. Lets start the process by first logging on to the HPCC (for more details see Document 3)
+
+ssh username(MSUID)@hpcc.msu.edu
+
+
+Once you are in the machine you will be taken to the prompt:
+
+Now paste the command(s) below and press enter (don't forget to press enter). 
 
 ::
 
 	module load powertools
 	getexample RNAseq-model
 	
+
 This loads the data from the machine to your home folder
 
-Now log into a node:
+Do to this we will now log into a compute node? Why do we have to use a commute node?
+
+
+
+Now log into a compute node:
+
+
+Half the class log into one node and the rest into the other node
 
 ::
 
 	ssh dev-intel14-phi
+	
+	
+::
+
+	ssh dev-intel14
 	
 
 Once you log into the dev node (you can get the list when you first log into the hpcc), type or paste the following 

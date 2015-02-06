@@ -26,8 +26,14 @@ Finally, you should get this screen and you are set.
 
 -	Windows Users:
 
-You will have to use your password twice to login to hpcc. Below is a screen shot after you log in.
+MobaXterm install should have created a shortcut to the desktop. Double click to launch the application.
 
+Now, you ou will can  use your password twice to login to hpcc. Below is a screen shot after you log in.
+
+
+ssh username(MSUID)@hpcc.msu.edu
+
+The application will ask your password twice and once you enter it it will take you to the hpcc screen
 
 The window on the left is the navigation panel, from which you can download files from the hpcc to your computer.
 

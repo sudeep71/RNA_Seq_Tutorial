@@ -32,6 +32,9 @@ Now paste or type this (be careful with space)
 
 sickle pe -c <combined input file> -t <quality type> -m <combined trimmed output> -s <trimmed singles file>
 
+The below command can either be pasted as as single line or the by the format shown below
+
+
 ::
 
 
@@ -56,7 +59,7 @@ Where:
 -l, length of read
 
 
-Let's see if the file was made? 
+Let's see if the files were made? 
 
 type 
 
@@ -79,7 +82,7 @@ So what do you see?
 
 
 
-To go out of press, control X
+To close nano, press control x
 
 
 
@@ -99,5 +102,5 @@ gzip name_of _file > name_of_file.gz
 	
 	
 	
-Now try to gzip the R2 file.
+Now try to gzip the trimmed R2 file.
 

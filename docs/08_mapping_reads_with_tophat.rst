@@ -50,7 +50,8 @@ What does all this mean? Lets first start this command and then talk about it as
 Now what are these parameters?
 
 
-For more information check the tophat manual (http://ccb.jhu.edu/software/tophat/manual.shtml)
+If you want a comprehensive list of commands that are used in Tophat, check the tophat manual (http://ccb.jhu.edu/software/tophat/manual.shtml)
+
 
 2. Now once the alingment is done, lets look up the statistics
 

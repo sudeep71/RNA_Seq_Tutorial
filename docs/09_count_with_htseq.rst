@@ -16,8 +16,10 @@ So, load the modules PySAM and HTSeq
 
 If you get a message, ignore it
 
+First check to see if you are in the tophat folder. If you are not then use cd to navigate to the directory. 
 
-Now run HTSeq to get the counts
+
+Once in the directory, now run HTSeq to get the counts
 
 ::
 

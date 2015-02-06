@@ -68,9 +68,9 @@ Now paste this into the file:
 	EOF
 
 
-.. note:: "#" or hash can be use in scripting language and the machine is inbuilt to leave or ignore these lines. So you can use # to be explicit. 
+.. note:: "#" or hash can be use in scripting language and the machine is inbuilt to leave or ignore these lines. So you can use # to be explicit. This is a good practice.
 
-You can use "nano" to edit the file
+You can use "nano" to edit the file if you have made a mistake
 
 ::
 
