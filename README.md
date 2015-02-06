@@ -6,7 +6,7 @@ NGS data obtained from RNA-Seq experiments.
 
 This is the order of files 
 
--software_requirements
+-01_software_requirements
 -process_overview
 -hpcc_login
 -basic_commands

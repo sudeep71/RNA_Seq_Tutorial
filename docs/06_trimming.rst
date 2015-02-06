@@ -3,15 +3,15 @@
 
 1. Trimming sequences
 
-.. note :: Some sequencing run will yield poor quality data. It's best not to use it in alignment process. So we are going to trim these sequences based on quality, length, N's etc. 
+.. note :: Some sequencing run will yield poor quality data. It's best not to use it in alignment process as it will lead to spurious results. So we are going to trim these sequences based on quality, length, N's etc. 
 
+Now copy the code below and paste 
 
 ::
 	
 	module load GNU/4.4.5
 	module load sickle/1.210
 	
-Now copy the code below and paste 
 
 How do you select these modules? 
 	
