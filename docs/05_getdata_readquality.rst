@@ -3,11 +3,15 @@
 
 The data we will be using has been downloaded from the source. You will not be doing this part.
 
-Two samples: salivary gland and lung. Note that each sample has one replicates, and each replicate has two files.
+The experiment consists of two samples: salivary gland and lung. Note that each sample has one replicates, and each replicate has two files.
 
 .. note:: Since downloading this data takes hours, the data has been already downloaded and put into a folder for connivence
 
-- Common Command line practices
+
+Before we start into this path....
+
+
+- Common command line practices
 
 The command line is case sensitive, so be careful when to type commands and file names. The best practice is to use lower case, underscore (_), and no spaces between words eg. course_work_project_mmg433 or CourseWorkProjectMMG433. Also try to be as explicit in naming folders or use a data stamp eg. mmg443_rnaseq_tutorial_1/1/2015 to distinguish runs. 
 
@@ -18,10 +22,12 @@ If you are typing out commands, please pay extra caution and watch out for spell
 
 1. Lets start the process by first logging on to the HPCC (for more details see Document 3)
 
+
 ssh username(MSUID)@hpcc.msu.edu
 
 
 Once you are in the machine you will be taken to the prompt:
+
 
 Now paste the command(s) below and press enter (don't forget to press enter). 
 
