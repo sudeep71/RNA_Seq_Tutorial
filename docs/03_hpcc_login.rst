@@ -1,7 +1,7 @@
 3. How to log into the HPCC?
 ==========================
 
-- Mac or Linux Users:
+- Mac Users:
 
 If you are on a Mac machine, first use spotlight (mac) and search for terminal
 
@@ -28,8 +28,7 @@ Finally, you should get this screen and you are set.
 
 MobaXterm install should have created a shortcut to the desktop. Double click to launch the application.
 
-Now, you ou will can  use your password twice to login to hpcc. Below is a screen shot after you log in.
-
+Then use your hpcc login credentials 
 
 ssh username(MSUID)@hpcc.msu.edu
 
