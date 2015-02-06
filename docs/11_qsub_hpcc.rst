@@ -12,7 +12,7 @@ The HPCC has a job submission protocol called qsub
 
 	cat > hpcc_trial.qsub <<EOF
 	
-and the paste this in:
+and then paste the following in:
 
 ::
 	
