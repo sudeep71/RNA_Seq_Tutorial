@@ -26,9 +26,12 @@ To run edgeR, you need to write a data loading and manipulation script in R. In 
 
 Next, to run the R script, do:
 
+::
 
-module load R
-Rscript lung_saliva.R
+
+	module load R
+
+	Rscript lung_saliva.R
 
 
 This will produce two files, edgeR-MA-plot.pdf and edgeR-lung-vs-salivary.csv; they will be in your rnaseq folder in your home directory on the HPC. The CSV file can be opened directly in Excel; you can also look at it here. It consists of five columns: gene name, log fold change, P-value, and FDR-adjusted P-value.
