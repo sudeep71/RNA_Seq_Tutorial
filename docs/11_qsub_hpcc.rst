@@ -15,8 +15,11 @@ The HPCC has a job submission protocol called qsub
 and then paste the following in:
 
 ::
+	#! /bin/bash
 	
-	#PBS -l walltime=12:00:00,nodes=1:ppn=2,mem=20gb
+	#PBS -o /mnt/home/perumbak/rnaseq
+	#PBS -l nodes=1:ppn=2,walltime=48:00:00
+	#PBS -l mem=20gb
 
 	module load GNU/4.4.5
 	module load sickle/1.210
