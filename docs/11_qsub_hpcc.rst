@@ -56,12 +56,12 @@ and then paste the following in:
 	# now run Tophat!
 	# The inputs are the outputs of the previous qzip step.
 	# The outputs are going to be under the 'tophat_lung_repl1' directory.
-	tophat -p 4 \
-    	-G ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf \
-    	--transcriptome-index=$HOME/RNAseq-model/transcriptome \
-    	-o tophat_lung_repl1 \
-    	~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome \
-    	lung_repl1_R1_trimmed.fq.gz lung_repl1_R2_trimmed.fq.gz
+	
+	tophat -G ~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf \
+    		--transcriptome-index=$HOME/RNAseq-model/transcriptome \
+    		-o tophat_lung_repl1 \
+    		~/RNAseq-model/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome \
+    		lung_repl1_R1_trimmed.fq.gz lung_repl1_R2_trimmed.fq.gz
 
 	# count the hits by gene -- 'tophat_lung_repl1' is the main output,
 	# from Tophat.
