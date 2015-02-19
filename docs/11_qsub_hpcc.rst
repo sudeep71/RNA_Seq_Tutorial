@@ -38,7 +38,7 @@ and then paste the following in:
 
 	# run Sickle.  Here, the inputs are 'lung_repl1_R1.fq.gz' and
 	# 'lung_repl1_R2.fq.gz', and the outputs are 'lung_repl1_R1_trimmed.fq'
-	# and 'lung_repl1_R2.qc.fq'.
+	# and 'lung_repl1_R2_trimmed.fq'.
 	
 	sickle pe -f lung_repl1_R1.fq.gz \
               -r lung_repl1_R2.fq.gz \
